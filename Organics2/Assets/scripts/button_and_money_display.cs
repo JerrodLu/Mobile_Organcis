@@ -7,13 +7,25 @@ public class button_and_money_display : MonoBehaviour
 {
     public double money = 0.00f;
     public Text moneyText;
-    public Text noMoney;
+    //public Text noMoney;
     public GameObject canvas;
+    public GameObject e;
+    public GameObject a;
+    public GameObject r;
+    public GameObject t;
+    public GameObject h;
+
+    employees Employ;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        e.SetActive(false);
+        a.SetActive(false);
+        r.SetActive(false);
+        t.SetActive(false);
+        h.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -22,12 +34,26 @@ public class button_and_money_display : MonoBehaviour
         DisplayMoney();
 
         // employee making money
-        //if()
-        //{
-            //FishQuater();
-        //}
-
-        
+        if (e.activeInHierarchy == true)
+        {
+            FishQuater();
+        }
+        else if (a.activeInHierarchy == true)
+        {
+            FishGallon();
+        }
+        else if (r.activeInHierarchy == true)
+        {
+            FishTwoAndAHalf();
+        }
+        else if (t.activeInHierarchy == true)
+        {
+            FishBuckets();
+        }
+         else if (h.activeInHierarchy == true)
+        {
+            FishBarrel();
+        }
     }
 
     // buttons to earn money
@@ -38,7 +64,7 @@ public class button_and_money_display : MonoBehaviour
 
     public void FishGallon()
     {
-        money += 20.78;
+        money += 20;
     }
 
     public void FishTwoAndAHalf()
@@ -54,6 +80,7 @@ public class button_and_money_display : MonoBehaviour
     public void FishBarrel()
     {
         money += 1100;
+        
     }
 
     public void DisplayMoney()
@@ -67,13 +94,14 @@ public class button_and_money_display : MonoBehaviour
         if (money >= 750)
         {
             money -= 750;
+            e.SetActive(true);
         }
-        /*
+        
         else
         {
-            noMoney.text = "You don't have enough money!";
+            
+            //noMoney.text = "You don't have enough money!";
         }
-        */
     }
 
     public void EmployeeTwo()
@@ -81,6 +109,7 @@ public class button_and_money_display : MonoBehaviour
         if (money >= 1500)
         {
             money -= 1500;
+            a.SetActive(true);
         }
         /*
         else
@@ -95,6 +124,7 @@ public class button_and_money_display : MonoBehaviour
         if (money >= 2300)
         {
             money -= 2300;
+            r.SetActive(true);
         }
         /*
         else
@@ -109,6 +139,7 @@ public class button_and_money_display : MonoBehaviour
         if (money >= 3000)
         {
             money -= 3000;
+            t.SetActive(true);
         }
         /*
         else
@@ -123,6 +154,7 @@ public class button_and_money_display : MonoBehaviour
         if (money >= 3800)
         {
             money -= 3800;
+            h.SetActive(true);
         }
         /*
         else
