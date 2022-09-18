@@ -53,7 +53,10 @@
     <UnityVersion>2020.3.38f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\Door.cs" />
+    <Compile Include="Assets\scripts\Player.cs" />
     <Compile Include="Assets\scripts\button_and_money_display.cs" />
+    <Compile Include="Assets\scripts\employees.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
