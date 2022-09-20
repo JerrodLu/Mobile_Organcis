@@ -15,8 +15,6 @@ public class button_and_money_display : MonoBehaviour
     public GameObject t;
     public GameObject h;
 
-    employees Employ;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,35 +23,13 @@ public class button_and_money_display : MonoBehaviour
         r.SetActive(false);
         t.SetActive(false);
         h.SetActive(false);
-
     }
 
     // Update is called once per frame
     void Update()
     {
         DisplayMoney();
-
-        // employee making money
-        if (e.activeInHierarchy == true)
-        {
-            FishQuater();
-        }
-        else if (a.activeInHierarchy == true)
-        {
-            FishGallon();
-        }
-        else if (r.activeInHierarchy == true)
-        {
-            FishTwoAndAHalf();
-        }
-        else if (t.activeInHierarchy == true)
-        {
-            FishBuckets();
-        }
-         else if (h.activeInHierarchy == true)
-        {
-            FishBarrel();
-        }
+        Hired();
     }
 
     // buttons to earn money
@@ -80,7 +56,6 @@ public class button_and_money_display : MonoBehaviour
     public void FishBarrel()
     {
         money += 1100;
-        
     }
 
     public void DisplayMoney()
@@ -162,5 +137,30 @@ public class button_and_money_display : MonoBehaviour
             noMoney.text = "You don't have enough money!";
         }
         */
+    }
+
+    // Employee running the machine
+    public void Hired()
+    {
+        if (e.activeInHierarchy == true)
+        {
+            FishQuater();
+        }
+        if (a.activeInHierarchy == true)
+        {
+            FishGallon();
+        }
+        if (r.activeInHierarchy == true)
+        {
+            FishTwoAndAHalf();
+        }
+        if (t.activeInHierarchy == true)
+        {
+            FishBuckets();
+        }
+        if (h.activeInHierarchy == true)
+        {
+            FishBarrel();
+        }
     }
 }
