@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class button_and_money_display : MonoBehaviour
 {
-    public GameObject e;
-    public GameObject a;
-    public GameObject r;
-    public GameObject t;
-    public GameObject h;
+    public GameObject e;//employee 
+    public GameObject a;//employee 
+    public GameObject r;//employee 
+    public GameObject t;//employee 
+    public GameObject h;//employee 
     public float money = 0.0f;
     public float netMoney = 0.0f;
     public Text moneyText;

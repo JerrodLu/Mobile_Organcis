@@ -26,30 +26,50 @@ public class product_buttons : MonoBehaviour
     {
         money += 5;
         netMoney += 5;
+
     }
 
     public void FishGallon()
     {
-        money += 20;
-        netMoney += 20;
+    
+        if (money >= 500)
+        {
+            money += 20;
+            netMoney += 20;
+           // Debug.Log("ran");
+        }
+
+
     }
 
     public void FishTwoAndAHalf()
     {
-        money += 50;
-        netMoney += 50;
+        if (money >= 2000) 
+        {
+            money += 50;
+            netMoney += 50;
+        }
+       
     }
 
     public void FishBuckets()
     {
-        money += 100;
-        netMoney += 100;
+        if (money >= 5000)
+        {
+            money += 100;
+            netMoney += 100;
+        }
+        
     }
 
     public void FishBarrel()
     {
-        money += 1100;
-        netMoney += 1100;
+        if (money >= 9000)
+        {
+            money += 1100;
+            netMoney += 1100;
+        }
+        
     }
 
     public void DisplayMoney()
