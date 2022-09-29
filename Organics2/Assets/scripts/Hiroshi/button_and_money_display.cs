@@ -14,6 +14,14 @@ public class button_and_money_display : MonoBehaviour
     public GameObject r;
     public GameObject t;
     public GameObject h;
+    // for random break
+    public double clickCount;
+    private int fakeRandomNumber;
+    public GameObject PayButton1;
+    public GameObject PayButton2;
+    public GameObject PayButton3;
+    public GameObject PayButton4;
+    public GameObject PayButton5;
 
     employees Employ;
 
@@ -25,6 +33,13 @@ public class button_and_money_display : MonoBehaviour
         r.SetActive(false);
         t.SetActive(false);
         h.SetActive(false);
+        //for random break
+        clickCount = 0.00f;
+        PayButton1.SetActive(false);
+        PayButton2.SetActive(false);
+        PayButton3.SetActive(false);
+        PayButton4.SetActive(false);
+        PayButton5.SetActive(false);
 
     }
 
@@ -59,28 +74,63 @@ public class button_and_money_display : MonoBehaviour
     // buttons to earn money
     public void FishQuater()
     {
-        money += 5;
+        if (clickCount <= 10)
+        {
+            money += 5;
+        }
+        else
+        {
+        
+        }
     }
 
     public void FishGallon()
     {
-        money += 20;
+        if (clickCount <= 10)
+        {
+            money += 20;
+        }
+        else
+        {
+  
+        }
     }
 
     public void FishTwoAndAHalf()
     {
-        money += 50;
+        if (clickCount <= 10)
+        {
+            money += 50;
+        }
+        else
+        {
+           
+        }
     }
 
     public void FishBuckets()
     {
-        money += 100;
+        if (clickCount <= 10)
+        {
+            money += 100;
+        }
+        else
+        {
+           
+        }
     }
 
     public void FishBarrel()
     {
-        money += 1100;
-        
+        if (clickCount <= 10)
+        {
+            money += 1100;
+        }
+        else
+        {
+           
+        }
+
     }
 
     public void DisplayMoney()
@@ -162,5 +212,43 @@ public class button_and_money_display : MonoBehaviour
             noMoney.text = "You don't have enough money!";
         }
         */
+    }
+
+    //try to use random range between 1 through 5 but failed.
+   private void Break1()
+    {
+        PayButton1.SetActive(true);
+    }
+    private void Break2()
+    {
+        PayButton2.SetActive(true);
+    }
+    private void Break3()
+    {
+        PayButton3.SetActive(true);
+    }
+    private void Break4()
+    {
+        PayButton4.SetActive(true);
+    }
+    private void Break5()
+    {
+        PayButton5.SetActive(true);
+    }
+    public void PaytoFix()
+    {
+
+        if (money >= 750)
+        {
+            money -= 750;
+            PayButton1.SetActive(false);
+            Debug.Log("paid");
+        }
+
+        else
+        {
+            money = 0.00f;
+            Debug.Log("bankrupted");
+        }
     }
 }
