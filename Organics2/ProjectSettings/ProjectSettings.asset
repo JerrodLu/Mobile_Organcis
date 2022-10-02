@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Baby Hands Produtions
+  companyName: BabyHandsProdutions
   productName: Organics
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -247,8 +247,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: E:/user.keystore
-  AndroidKeyaliasName: plant
+  AndroidKeystoreName: '{dedicated}: Organics_publishingKey.keystore'
+  AndroidKeyaliasName: oraganicspc
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

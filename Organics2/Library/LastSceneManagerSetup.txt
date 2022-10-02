@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Hiro_Script_Test.unity
+- path: Assets/Scenes/main_hub.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
